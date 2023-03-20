@@ -1,52 +1,49 @@
-import Image from 'next/image'
-import { Inter } from 'next/font/google'
-import styles from './page.module.css'
+import { Inter } from 'next/font/google';
+import styles from './page.module.css';
 
-const inter = Inter({ subsets: ['latin'] })
+const interTitle = Inter({
+    subsets: ['latin'],
+    weight: '800',
+    style: 'normal',
+});
+const inter = Inter({ subsets: ['latin'] });
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.tsx</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+    return (
+        <main className={styles.main}>
+            <div className={styles.description}>
+                <p>
+                    A Secure Platform for Managing Your Personal Medical
+                    Information and Assistance.
+                </p>
+                <div>
+                    <a
+                        className={inter.className}
+                        href="https://sombochea.medium.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        By Chea Sambo
+                    </a>
+                </div>
+            </div>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-        <div className={styles.thirteen}>
-          <Image src="/thirteen.svg" alt="13" width={40} height={31} priority />
-        </div>
-      </div>
+            <div className={styles.center}>
+                <h1
+                    className={interTitle.className}
+                    style={{
+                        fontSize: '3rem',
+                    }}
+                >
+                    YourMed App
+                </h1>
+                <div className={styles.thirteen}>
+                    <h2 className={inter.className}>1.0</h2>
+                </div>
+            </div>
 
-      <div className={styles.grid}>
-        <a
+            <div className={styles.grid}>
+                {/* <a
           href="https://beta.nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
           className={styles.card}
           target="_blank"
@@ -84,8 +81,17 @@ export default function Home() {
           <p className={inter.className}>
             Instantly deploy your Next.js site to a shareable URL with Vercel.
           </p>
-        </a>
-      </div>
-    </main>
-  )
+        </a> */}
+            </div>
+
+            <div
+                className={inter.className}
+                style={{
+                    fontSize: '.8rem',
+                }}
+            >
+                <p>&copy; YourMed {new Date().getFullYear()}</p>
+            </div>
+        </main>
+    );
 }
