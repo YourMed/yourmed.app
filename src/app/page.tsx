@@ -29,14 +29,31 @@ export default function Home() {
             </div>
 
             <div className={styles.center}>
-                <h1
-                    className={interTitle.className}
-                    style={{
-                        fontSize: '3rem',
-                    }}
-                >
-                    YourMed App
-                </h1>
+                <div style={{
+                    marginBottom: '2rem',
+                }}>
+                    <h3
+                        className={inter.className}
+                        style={{
+                            display: 'flex',
+                            justifyContent: 'flex-start',
+                            alignItems: 'center',
+                            fontSize: '1.5rem',
+                            fontWeight: 400,
+                            fontStyle: 'italic',
+                        }}
+                    >
+                        Coming soon...
+                    </h3>
+                    <h1
+                        className={interTitle.className}
+                        style={{
+                            fontSize: '3rem',
+                        }}
+                    >
+                        YourMed App
+                    </h1>
+                </div>
                 <div className={styles.thirteen}>
                     <h2 className={inter.className}>1.0</h2>
                 </div>
